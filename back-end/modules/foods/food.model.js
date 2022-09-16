@@ -5,12 +5,14 @@ const foodSchema = new mongoose.Schema({
   food_name: {
     type: String,
     required: true,
+    unique: true,
   },
   price: {
     type: Number,
   },
   discount: {
     type: Number,
+    default: 0,
   },
   category_id: {
     type: Schema.Types.ObjectId,

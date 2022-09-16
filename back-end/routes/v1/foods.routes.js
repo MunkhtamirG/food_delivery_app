@@ -5,7 +5,7 @@ const foodsController = require("../../modules/foods");
 router.post("/", foodsController.createFood);
 router.get("/", foodsController.getAllFoods);
 router.get("/:id", foodsController.getFoodById);
-router.put("/update", foodsController.updateFood);
-router.delete("/delete/:id", foodsController.deleteFood);
+router.put("/", foodsController.updateFood);
+router.delete("/:id", foodsController.deleteFood);
 
 module.exports = router;
