@@ -83,7 +83,10 @@ const Navbar = () => {
   }));
 
   return (
-    <AppBar position="static">
+    <AppBar
+      position="static"
+      style={{ backgroundColor: "white", color: "#F17228" }}
+    >
       <Container>
         <Toolbar disableGutters>
           <Box sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}>
@@ -104,14 +107,18 @@ const Navbar = () => {
           >
             Food Delivery
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", md: "none" },
+            }}
+          >
             <IconButton
               size="large"
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
             >
               <MenuIcon />
             </IconButton>
@@ -167,7 +174,8 @@ const Navbar = () => {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{ my: 2, display: "block" }}
+                style={{ color: "#F17228" }}
               >
                 {page}
               </Button>
@@ -180,6 +188,7 @@ const Navbar = () => {
             <StyledInputBase
               placeholder="Хайх..."
               inputProps={{ "aria-label": "search" }}
+              style={{ border: "1px solid #FBC5A6", borderRadius: "10px" }}
             />
           </Search>
           <Box sx={{ flexGrow: 0 }}>
